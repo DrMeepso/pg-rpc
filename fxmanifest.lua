@@ -15,7 +15,7 @@ shared_script {
 provide 'pg-rpc' -- This is the name of the resource
 
 -- for debugging
-if true then
+if false then
    
     server_script {
         'test/server.lua'
