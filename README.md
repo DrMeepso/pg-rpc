@@ -171,9 +171,9 @@ function CallRPCAsync(name: string, cb: function, ...any)
 
 ```lua
 -- client.lua
-CallRPCAsync("test:math", function(add, sub, mul, div), 5, 3,
+CallRPCAsync("test:math", function(add, sub, mul, div)
     print(add, sub, mul, div)
-end)
+end, 5, 3)
 ```
 
 #### Server to Client
@@ -187,9 +187,9 @@ function CallClientRPCAsync(name: string, cb: function, player: number, ...any)
 ```lua
 -- server.lua
 local player = 1
-CallClientRPCAsync("test:math", function(add, sub, mul, div), player, 5, 3,
+CallClientRPCAsync("test:math", function(add, sub, mul, div)
     print(add, sub, mul, div)
-end)
+end, player, 5, 3)
 ```
 
 ---
